@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "exam")
 @Data
@@ -21,6 +23,9 @@ public class Exam {
 
     @Column(name = "location_file",nullable = false,length = 90)
     private String locationFile;
+
+    @Column(name = "date",nullable = false)
+    private LocalDate date;
 
     @OneToOne
     @JoinColumn(name = "language_id",referencedColumnName = "id",nullable = false)

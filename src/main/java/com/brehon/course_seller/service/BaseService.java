@@ -4,15 +4,15 @@ import jakarta.validation.Valid;
 
 import java.util.List;
 
-public interface BaseService <D,N>{
-    List<D> findAll();
+public interface BaseService <DTO,ID>{
+    List<DTO> findAll();
 
-    D findById(N id);
+    DTO findById(ID id);
 
-    D saveOrUpdate(@Valid D dto);
+    DTO saveOrUpdate(@Valid DTO dto);
 
-    void delete(@Valid D dto);
+    void delete(@Valid DTO dto);
 
 
-    void deleteById(N id);
+    void deleteById(ID id);
 }
